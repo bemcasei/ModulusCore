@@ -3,8 +3,9 @@
  * Configuration for ModulusCore module
  */
 
-use Doctrine\ORM\Mapping\Driver\AnnotationDriver;
 namespace ModulusCore;
+
+use Doctrine\ORM\Mapping\Driver\AnnotationDriver;
 
 return [
     'controller_plugins' => [
