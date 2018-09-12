@@ -15,7 +15,7 @@
   "prefer-stable": true,
   "require": {
     "php": "^7.0",
-    "doctrine/doctrine-orm-module": "^2.1",
+    "doctrine/doctrine-orm-module": "^1.2",
     "zendframework/zend-crypt": "^3.3",
     "zendframework/zend-mail": "^2.10",
     "zendframework/zend-modulemanager": "^2.8",
