@@ -6,6 +6,8 @@ namespace ModulusCore;
 
 use ModulusCore\Factory\MailFactory;
 use ModulusCore\Mail\Mail;
+use ModulusCore\Services\Factory\IuguServiceFactory;
+use ModulusCore\Services\IuguService;
 use Zend\ModuleManager\Feature\ConfigProviderInterface;
 use Zend\ModuleManager\Feature\ServiceProviderInterface;
 
@@ -30,7 +32,10 @@ class Module implements ConfigProviderInterface, ServiceProviderInterface
     {
         return [
             'factories' => [
-                Mail::class => MailFactory::class
+                Mail::class => MailFactory::class,
+
+                // Services
+                IuguService::class => IuguServiceFactory::class
             ],
         ];
     }

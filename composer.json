@@ -15,6 +15,7 @@
   "prefer-stable": true,
   "require": {
     "php": "^7.0",
+    "bemcasei/iugu-php": "^1.0",
     "doctrine/doctrine-orm-module": "^1.1",
     "zendframework/zend-crypt": "^3.3",
     "zendframework/zend-mail": "^2.10",
