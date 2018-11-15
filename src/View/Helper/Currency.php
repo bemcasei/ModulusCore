@@ -38,6 +38,6 @@ class Currency extends CurrencyFormat
      */
     protected function formatBr($number)
     {
-        return parent::__invoke($number, 'BRL', null, 'pt_BR', 'R$ ');
+        return parent::__invoke($number, 'BRL', null, 'pt_BR');
     }
 }

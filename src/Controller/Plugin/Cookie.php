@@ -46,7 +46,7 @@ class Cookie extends AbstractPlugin
      * @param bool $isEncrypted
      * @return bool|string
      */
-    public function __invoke($key, $value = null, $expire = null, $isEncrypted = true)
+    public function __invoke($key, $value = null, $expire = null, $isEncrypted = false)
     {
         if (! $value) {
             $value = $this->request->getHeaders()->get('Cookie')->{$key};
@@ -69,7 +69,7 @@ class Cookie extends AbstractPlugin
      */
     private function encrypted($cookie)
     {
-        $blockCipher = BlockCipher::factory('mcrypt', ['algo' => 'aes']);
+        $blockCipher = BlockCipher::factory('openssl', ['algo' => 'aes']);
         $blockCipher->setKey('a1w2b4c6v7b6fcdbatyr');
 
         return $blockCipher->encrypt($cookie);
@@ -83,7 +83,7 @@ class Cookie extends AbstractPlugin
      */
     private function decrypted($cookie)
     {
-        $blockCipher = BlockCipher::factory('mcrypt', ['algo' => 'aes']);
+        $blockCipher = BlockCipher::factory('openssl', ['algo' => 'aes']);
         $blockCipher->setKey('a1w2b4c6v7b6fcdbatyr');
 
         return $blockCipher->decrypt($cookie);
